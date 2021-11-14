@@ -1,0 +1,9 @@
+---
+:orm: none
+:test: rspec
+:mock: none
+:script: none
+:renderer: none
+:stylesheet: none
+:namespace: Userinfo
+:migration_format: number
