@@ -2,7 +2,7 @@ module Service
   module Cache
     require 'active_support/time'
 
-    def self.set(key, value, expires_at=Time.now + 5.seconds)
+    def self.set(key, value, expires_at=Time.now + 2.minutes)
       Padrino.cache[key] = {
         value: value,
         expires_at: expires_at

@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + "/../spec_helper.rb"
+require 'active_support/time'
 
 describe "test Service::Cache" do
   it "should display dummy key value" do
@@ -11,8 +12,8 @@ describe "test Service::Cache" do
   end
 
   it "should display dummy key value" do
-    Service::Cache.set('dummy', 'hey!')
-    sleep 5
+    Service::Cache.set('dummy', 'hey!', 3.seconds)
+    sleep 3
     expect(Service::Cache.get('dummy')).to be_nil
   end
 end
